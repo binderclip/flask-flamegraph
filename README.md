@@ -2,11 +2,15 @@
 
 flask-flamegraph helps you quickly understand:
 
-   * Where all the time is being spent in your endpoints
-   * How deep your callstacks are
-   * Where the lowest hanging fruit is for optimization
+* Where all the time is being spent in your endpoints
+* How deep your callstacks are
+* Where the lowest hanging fruit is for optimization
 
 ![Example image](images/example.png)
+
+## Install
+
+    pip install git+https://github.com/binderclip/flask-flamegraph.git
 
 ## Quickstart Example
 
@@ -22,11 +26,12 @@ flask-flamegraph helps you quickly understand:
 
     if __name__ == '__main__':
         app = create_app()
-        app.run()
+        app.run(use_reloader=False, use_debugger=False, threaded=False)
 
 After this, hit any of your routes, and navigate to `http://localhost:5000/__flame__`
 
 ## Testing
+
 Run the tests:
 
     pytest
