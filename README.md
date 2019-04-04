@@ -30,6 +30,8 @@ flask-flamegraph helps you quickly understand:
 
 After this, hit any of your routes, and navigate to `http://localhost:5000/__flame__`
 
+(Remember to restart the app after update code because `use_reloader=False`)
+
 ## Testing
 
 Run the tests:
