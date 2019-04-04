@@ -32,7 +32,7 @@ class FlaskFlamegraph:
 
     def render(self, environ, start_response):
         verb = environ.get('REQUEST_METHOD', 'GET').strip().upper()
-        if verb != 'GET':
+        if verb not in ('GET', "HEAD"):
             response = Response(
                 '405 Method Not Allowed',
                 status=405,
